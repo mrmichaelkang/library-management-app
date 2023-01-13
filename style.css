@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --nav-color: #112D4E;
+  --main-color: #F9F7F7;
+  --button-color: #3F72AF;
+  --row-color: #DBE2EF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--nav-color);
+  padding: 30px;
+  color: var(--main-color);
+}
+
+nav > ul {
+  list-style: none;
+}
+
+button {
+  background-color: var(--button-color);
+  border: none;
+  width: 150px;
+  padding: 5px;
+  color: var(--main-color);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #699bd8;
+}
+
+
+/* TABLE SECTION */
+
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: right;
+}
+
+td, th {
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: var(--row-color);
+}
+
+#table-section {
+  display: flex;
+  height: calc(100vh - 87);
+  flex-direction: column;
+  margin: 30px;
+}
+
+
+/* MODAL SECTION */
+#form-section {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -70%);
+  width: 600px;
+  background-color: var(--row-color);
+  margin: 100px auto;
+  padding: 10px
+}
+
+#form-section > span {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 3rem;
+  margin-left: 97%;
+  margin-bottom: 10px;
+}
+
+form > div {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+form > div > label {
+  flex: 1;
+  font-size: 1.3rem;
+  color: var(--button-color);
+}
+
+form > div > input {
+  flex: 2;
+  padding: 5px;
+}
+
+span:hover {
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#form-btn {
+  width: 100%;
+}
+
+/* https://www.quackit.com/css/flexbox/tutorial/align_form_elements_with_flexbox.cfm */
+
+@media only screen and (max-width: 768px) {
+  #form-section {
+    transform: translate(-50%, -70%);
+    width: 400px;
+  }
+
+  form > div {
+    flex-direction: column;
+  }
+
+  form > div:last-of-type {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Library App</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Library Management App</h1>
+      <ul>
+        <li><button id="add-btn">Add Book</button></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>No. of Pages</th>
+            <th>Has Read</th>
+          </tr>
+        </thead>
+        <tbody id="library"></tbody>
+      </table>
+    </section>
+
+    <section id="form-section">
+      <span>&times;</span>
+      <form>
+        <div>
+          <label for="title">Title: </label>
+          <input id="title" name="title" type="text" placeholder="Enter book's title">
+        </div>
+        <div>
+          <label for="author">Author: </label>
+          <input id="author" name="author" type="text" placeholder="Enter author's name">
+        </div>
+        <div>
+          <label for="pages">No. of Pages: </label>
+          <input id="pages" name="pages" type="text" placeholder="Enter number of pages">
+        </div>
+        <div>
+          <label for="read">Read? </label>
+          <input type="checkbox" name="read" id="read">
+        </div>
+        <button id="form-btn">Submit</button>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
